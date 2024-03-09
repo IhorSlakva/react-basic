@@ -9,6 +9,8 @@ import {
 } from 'components';
 import dataArticle from './data/article.json';
 
+import dataStats from "./data/stats.json"
+
 export const App = () => {
   return (
     <Section>
@@ -25,13 +27,16 @@ export const App = () => {
         />
 
         <Heading title="Task 2 Statistics" top bottom />
-        <Statistics title="Main Statistics" />
+        <Statistics title="Main Statistics" 
+          dataStats = {dataStats}
+        />
 
         <Heading title="Task 3 Forbes list" top bottom />
         <ForbesList />
 
         <Heading title="Task 4 Crypto history" top bottom />
         <CryptoHistory />
+
       </Container>
     </Section>
   );
